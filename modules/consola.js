@@ -1,4 +1,4 @@
-// console.log("ver algo");
+console.log("ver algo");
 // console.info("tambien para ver algo");
 // console.error("error");
 // console.warn("advertencia");
