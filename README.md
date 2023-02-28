@@ -144,3 +144,92 @@ ___
 
 Hay distintos estados de las peticiones al servidor que se pueden ver de manera más amigable [aquí](https://http.cat/)
 
+### Process
+___
+
+Podremos entender y ver qué pasa con el Process, podremos escuchar señales, escuchar lo que necesitemos y después hacer cosas con ellos.
+
+Podemos hacer *require* para obtener **process**
+
+`const process = require('process);`
+
+Pero lo anterior no es necesario, ya que process es una variable global.
+
+- **beforeExit** → Es para enviar algo antes que pare un proceso.
+- **exit** → Es para matar un proceso.
+- **uncaughtException** → Permite capturar cualquier error que no fue caputurado previamente.
+- **uncaughtRejection** → Permite capturar cualquier error de promesas que se han rechazado.
+
+### Buffers
+___
+
+Un buffer es un espacio de memoria (en la memoria ram), en el que se almacenan datos de manera temporal.
+
+Es la forma mas cruda en la que se pueden almacenar los datos. (Se guardan en *bytes* y no se especifica el tipo de dato)
+
+*En la consola, los datos se muestran en formato hexadecimal.*
+
+**Creación buffer básico**
+
+Para crear un buffer, con 4 espacios por ejemplo, podemos hacerlo con la siguiente sintaxis.
+```
+let buffer = Buffer.alloc(4);
+console.log(buffer); 
+// Output:
+//<Buffer 00 00 00 00>
+```
+**Otro forma de crear un buffer**
+
+Datos en un arreglo
+```
+let buffer = Buffer.from([1,2,3]);
+console.log(buffer);
+// Output:
+// <Buffer 01 02 03>
+```
+
+**Datos tipo String**
+
+```
+let buffer = Buffer.from("Hola");
+console.log(buffer);
+console.log(buffer.toString());
+// Ouput:
+// <Buffer 48 6f 6c 61>
+// Hola
+
+```
+**Podemos guardar el abecedario**
+```
+let abc = Buffer.alloc(26);
+console.log(abc);
+
+for (let i = 0; i < 26; i++) {
+  abc[i] = i + 97;
+}
+console.log(abc.toString());
+// Output:
+// <Buffer 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00>
+// abcdefghijklmnopqrstuvwxyz
+```
+
+### Streams
+___
+
+Un stream es el proceso de ir consumiendo datos al tiempo que se están recibiendo. En palabras del profesor, es el paso de datos entre un punto y otro.
+
+
+**Diferencia entre un Buffer & un Stream**
+
+*Un buffer es un montón de datos y un stream es un proceso donde pasan un montón de datos.*
+
+![](https://tolustar.com/wp-content/uploads/2021/06/buffer-and-stream.png)
+
+### Error First Callbacks
+___
+
+Un patrón que se sigue siempre en cualquier lenguaje y programa de devs es *Error First Callbacks*, esto quiere decir que siempre que tengamos un callback el primer parámetro debería ser el error.
+
+`😭 Esto se usa por la convención de que todo puede fallar.`
+
+Otro patrón típico es tener el callback como la última función que se pasa. Aunque depende del caso.
