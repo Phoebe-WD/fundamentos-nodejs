@@ -233,3 +233,18 @@ Un patrón que se sigue siempre en cualquier lenguaje y programa de devs es *Err
 `😭 Esto se usa por la convención de que todo puede fallar.`
 
 Otro patrón típico es tener el callback como la última función que se pasa. Aunque depende del caso.
+___
+¿Cómo se le llama a la función que se ejecuta cuando termina otra función asíncrona? *R: Callback*
+
+¿Se puede usar la palabra reservada "await" en cualquier sitio? *R: No, solo en funciones declaradas async*
+
+¿Cuál de los siguientes módulos NO está en los módulos globales? *R: Crypto*
+
+¿Cómo indentamos un nivel los logs de consola? *R: console.group*
+
+Cuando se lanzan excepciones, ¿cómo las capturamos? *R: Con try / Catch*
+
+¿Se pueden ejecutar comandos del sistema desde NodeJS? ¿Cómo? *R: Si, Con procesos hijos*
+
+¿En qué lenguajes se pueden desarrollar módulos nativos para NodeJS? *R: JS y C++*
+
