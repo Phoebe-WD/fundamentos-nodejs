@@ -1,4 +1,5 @@
-# Conceptos
+# Fundamentos NodeJs
+## Conceptos
 
 NodeJS es un entorno de ejecución de JavaScript fuera del navegador. Se crea en 2009, orientado a servidores. Es muy importante que esté fuera del navegador debido a que ya no es necesario un navegador web para ejecutar código JavaScript.
 
@@ -66,12 +67,12 @@ PM2 commands:
 - Status = *pm2 status*
 - Logs = *pm2 logs*
 
-### Callbacks
+## Callbacks
 ___
 
 Una funcion **callback** es una funcion que es pasada como argumento a otra funcion, para ser llamada(called back) en otro momento.
 
-### File System
+## File System
 ____
 
 El **file system** provee una API para interactuar con el sistema de archivos cerca del estándar POSIX.
@@ -82,7 +83,7 @@ El file system nos permite acceder archivo del sistema, leer, modificar., escrib
 Para ver más sobre la documentación de FileSystem:
 [FileSystem Docs](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html#fs_file_system)
 
-### Consola
+## Consola
 ___
 Con console podemos imprimir todo tipo de valores por
 nuestra terminal.
@@ -101,7 +102,7 @@ nuestra terminal.
 - **console.clear:** Limpia la consola.
 
 
-### Errores (Try / Catch)
+## Errores (Try / Catch)
 ___
 Cuando se genera un error, *node* propaga el error hacia arriba, hasta que este es capturado. si el error no se captura *node* se detiene.
 
@@ -130,7 +131,7 @@ function funcAsync() {
   });
 }
 ```
-### HTTP
+## HTTP
 ___
 
 Node nos ofrece el modulo HTTP el cual nos permite principalmente crear un servidor en nuestro computador.
@@ -139,12 +140,12 @@ En este modulo encontraremos todo lo necesario que necesitamos para crear un sis
 
 Uno de los métodos principales de este modulo es createServer, el cual nos permitirá abrir un puerto para crear el servidor.
 
-### Estados de las peticiones
+## Estados de las peticiones
 ___
 
 Hay distintos estados de las peticiones al servidor que se pueden ver de manera más amigable [aquí](https://http.cat/)
 
-### Process
+## Process
 ___
 
 Podremos entender y ver qué pasa con el Process, podremos escuchar señales, escuchar lo que necesitemos y después hacer cosas con ellos.
@@ -160,7 +161,7 @@ Pero lo anterior no es necesario, ya que process es una variable global.
 - **uncaughtException** → Permite capturar cualquier error que no fue caputurado previamente.
 - **uncaughtRejection** → Permite capturar cualquier error de promesas que se han rechazado.
 
-### Buffers
+## Buffers
 ___
 
 Un buffer es un espacio de memoria (en la memoria ram), en el que se almacenan datos de manera temporal.
@@ -213,7 +214,7 @@ console.log(abc.toString());
 // abcdefghijklmnopqrstuvwxyz
 ```
 
-### Streams
+## Streams
 ___
 
 Un stream es el proceso de ir consumiendo datos al tiempo que se están recibiendo. En palabras del profesor, es el paso de datos entre un punto y otro.
@@ -225,7 +226,7 @@ Un stream es el proceso de ir consumiendo datos al tiempo que se están recibien
 
 ![](https://tolustar.com/wp-content/uploads/2021/06/buffer-and-stream.png)
 
-### Error First Callbacks
+## Error First Callbacks
 ___
 
 Un patrón que se sigue siempre en cualquier lenguaje y programa de devs es *Error First Callbacks*, esto quiere decir que siempre que tengamos un callback el primer parámetro debería ser el error.
